@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,9 +10,13 @@ html {
 }
 
 .header {
-    height: 100vh;
+    height: 6em;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:9999;
+    margin-top: 0vh !important;
 }
 
 .slider-box__image {
@@ -31,19 +34,6 @@ html {
     padding: 20px 0;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-}
-
-nav {
-    z-index: 9999;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.media-nav {
-    position: fixed;
-    top: 0;
 }
 
 .media-nav .nav-menu {
@@ -78,6 +68,10 @@ nav {
 
 .nav-menu__item a:hover {
     color: #5FBDCE;
+}
+
+.main {
+    margin-top: 6em !important; /* Add a top margin to avoid content overlay */
 }
 
 .sea-world {
@@ -387,9 +381,6 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    .header {
-        margin-top: 62px;
-    }
     .heading-secondary {
         font-size: 15px;
     }
